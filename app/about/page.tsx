@@ -56,7 +56,6 @@ export default function AboutPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
-      <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
       <main id="main-content">
         <Manifesto/>

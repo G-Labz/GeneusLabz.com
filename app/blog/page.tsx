@@ -2,6 +2,21 @@
 import { useEffect } from "react";
 import { CSS, Nav, Footer } from "../_shared";
 
+// ─── Blog ─────────────────────────────────────────────────────────────────────
+function BlogIndex() {
+  return (
+    <section style={{padding:"120px 0",minHeight:"calc(100vh - 66px)"}}>
+      <div className="wrap reveal">
+        <div className="lbl">Blog</div>
+        <h1 className="st" style={{marginBottom:20}}>Lab Notes</h1>
+        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580}}>
+          Insights, builds, and dispatches from the GeneUs Labz team. Updates coming soon.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 // ─── Root ─────────────────────────────────────────────────────────────────────
 export default function BlogPage() {
   useEffect(()=>{
@@ -15,9 +30,9 @@ export default function BlogPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
-      <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
-      <main id="main-content" style={{paddingTop:66,minHeight:"100vh"}}>
+      <main id="main-content">
+        <BlogIndex/>
       </main>
       <Footer/>
     </>

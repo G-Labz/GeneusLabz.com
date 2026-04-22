@@ -285,7 +285,6 @@ export default function WorkPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
-      <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
       <main id="main-content">
         <Flagship/>
