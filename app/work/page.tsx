@@ -25,7 +25,7 @@ function Flagship() {
         {/* Label */}
         <div style={{
           fontFamily:"var(--ff-m)", fontSize:"0.57rem", letterSpacing:"0.16em",
-          color:"rgba(245,166,35,0.7)", textTransform:"uppercase", marginBottom:40,
+          color:"var(--gold)", textTransform:"uppercase", marginBottom:40,
         }}>Flagship IP</div>
         {/* Two-column */}
         <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:80, alignItems:"center"}}>
@@ -56,7 +56,7 @@ function Flagship() {
                 border:"1px solid rgba(245,166,35,0.38)",
                 borderRadius:10, padding:"12px 26px",
                 fontFamily:"var(--ff-m)", fontSize:"0.72rem", letterSpacing:"0.06em",
-                color:"rgba(245,166,35,0.9)", textDecoration:"none", transition:"all 0.22s",
+                color:"var(--gold)", textDecoration:"none", transition:"all 0.22s",
               }}
               onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.24) 0%, rgba(212,43,43,0.18) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.65)";}}
               onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.38)";}}
