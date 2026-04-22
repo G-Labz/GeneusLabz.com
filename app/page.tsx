@@ -321,7 +321,7 @@ const SM_LOGO_SRC = "/logo-sm.png";
 
 // ─── Metrics ──────────────────────────────────────────────────────────────────
 function Metrics() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [counted,setCounted] = useState(false);
   const [vals,setVals] = useState([0,0,0,0]);
   const data = [
@@ -332,23 +332,32 @@ function Metrics() {
   ];
   useEffect(()=>{
     if(!ref.current) return;
+    let active=true;
+    const rafIds:number[]=[];
+    const toIds:ReturnType<typeof setTimeout>[]=[];
     const obs=new IntersectionObserver(([e])=>{
       if(e.isIntersecting&&!counted){
         setCounted(true);
         data.forEach(({target},i)=>{
           const dur=1500,t0=performance.now();
           const tick=(now: number)=>{
+            if(!active) return;
             const p=Math.min((now-t0)/dur,1),ease=1-Math.pow(1-p,3);
             setVals(v=>{const n=[...v];n[i]=Math.floor(ease*target);return n;});
-            if(p<1)requestAnimationFrame(tick);
+            if(p<1) rafIds[i]=requestAnimationFrame(tick);
             else setVals(v=>{const n=[...v];n[i]=target;return n;});
           };
-          setTimeout(()=>requestAnimationFrame(tick),i*90);
+          toIds[i]=setTimeout(()=>{rafIds[i]=requestAnimationFrame(tick);},i*90);
         });
       }
     },{threshold:0.5});
     obs.observe(ref.current);
-    return()=>obs.disconnect();
+    return()=>{
+      active=false;
+      obs.disconnect();
+      toIds.forEach(id=>clearTimeout(id));
+      rafIds.forEach(id=>cancelAnimationFrame(id));
+    };
   },[counted]);
 
   return (
