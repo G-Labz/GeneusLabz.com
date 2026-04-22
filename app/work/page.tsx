@@ -49,20 +49,19 @@ function Flagship() {
             }}>
               Proof of what&apos;s possible when culture, craft, and community are built into the foundation, not added later.
             </p>
-            <a href="#"
+            <span
+              aria-label="ShangoMaji — coming soon"
               style={{
                 display:"inline-flex", alignItems:"center", gap:8,
                 background:"linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)",
                 border:"1px solid rgba(245,166,35,0.38)",
                 borderRadius:10, padding:"12px 26px",
                 fontFamily:"var(--ff-m)", fontSize:"0.72rem", letterSpacing:"0.06em",
-                color:"var(--gold)", textDecoration:"none", transition:"all 0.22s",
+                color:"var(--gold)", cursor:"default", userSelect:"none",
               }}
-              onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.24) 0%, rgba(212,43,43,0.18) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.65)";}}
-              onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.38)";}}
             >
-              Explore ShangoMaji <span style={{fontSize:14, lineHeight:1}}>→</span>
-            </a>
+              Explore ShangoMaji <span style={{fontSize:14, lineHeight:1, opacity:0.5}}>→</span>
+            </span>
           </div>
           {/* RIGHT */}
           <div style={{position:"relative"}}>

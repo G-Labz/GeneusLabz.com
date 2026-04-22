@@ -128,9 +128,9 @@ function Nav() {
 // ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer() {
   const cols=[
-    {h:"Company",     links:[["About","/about"],["Work","/work"],["Pillars","/pillars"],["Blog","/blog"],["Contact","/contact"],["Careers","/careers"]]},
-    {h:"Build Tracks",links:[["Gaming & Interactive","/work/gaming"],["Entertainment & IP","/work/entertainment"],["Software & Tech","/work/technology"],["View All Work","/work"]]},
-    {h:"Community",   links:[["Discord","/community"]]},
+    {h:"Company",     links:[["About","/about"],["Work","/work"],["Pillars","/about"],["Blog","/blog"],["Contact","/contact"]]},
+    {h:"Build Tracks",links:[["Gaming & Interactive","/work"],["Entertainment & IP","/work"],["Software & Tech","/work"],["View All Work","/work"]]},
+    {h:"Connect",     links:[["Contact Us","/contact"]]},
   ];
   return (
     <footer role="contentinfo" style={{borderTop:"1px solid var(--border)",paddingTop:52,paddingBottom:32}}>
@@ -146,16 +146,13 @@ function Footer() {
             <p style={{fontSize:"0.82rem",color:"var(--t3)",lineHeight:1.7,maxWidth:230,marginBottom:20}}>
               GeneUs Labz builds original systems, worlds, and platforms across culture, technology, and media.
             </p>
-            <nav aria-label="Social media links" style={{display:"flex",gap:7}}>
-              {[["𝕏","Twitter"],["◎","Instagram"],["in","LinkedIn"],["⌘","Discord"]].map(([icon,lbl])=>(
-                <a key={lbl} href="#" aria-label={lbl}
-                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s"}}
-                  onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
-                  onMouseLeave={e=>{e.currentTarget.style.background="rgba(0,0,0,0.04)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
-
-                >{icon}</a>
+            <div aria-hidden="true" style={{display:"flex",gap:7}}>
+              {["𝕏","◎","in","⌘"].map((icon,i)=>(
+                <span key={i}
+                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)"}}
+                >{icon}</span>
               ))}
-            </nav>
+            </div>
           </div>
           {cols.map(col=>(
             <nav key={col.h} aria-label={`${col.h} links`}>
@@ -173,14 +170,11 @@ function Footer() {
         </div>
         <div className="footer-bottom" style={{display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:24,borderTop:"1px solid var(--border)"}}>
           <span style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>© 2024–2026 GeneUs Labz. All rights reserved.</span>
-          <nav aria-label="Legal links" style={{display:"flex",gap:20}}>
-            {[["Privacy","/privacy"],["Terms","/terms"],["Accessibility","/accessibility"]].map(([lbl,href])=>(
-              <Link key={lbl} href={href} style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)",transition:"color 0.14s"}}
-                onMouseEnter={e=>e.currentTarget.style.color="var(--t2)"}
-                onMouseLeave={e=>e.currentTarget.style.color="var(--t3)"}
-              >{lbl}</Link>
+          <div style={{display:"flex",gap:20}}>
+            {["Privacy","Terms","Accessibility"].map(lbl=>(
+              <span key={lbl} style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>{lbl}</span>
             ))}
-          </nav>
+          </div>
         </div>
       </div>
     </footer>
