@@ -60,9 +60,10 @@ const CSS = `
   .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(0,0,0,0.04);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
   @media(max-width:768px){
     .wrap{padding:0 20px!important;}
-    .nav-inner{padding:0 20px!important;gap:12px!important;}
-    .nav-links{display:none!important;}
-    .nav-cta{display:none!important;}
+    .nav-inner{padding:0 16px!important;gap:0!important;}
+    .nav-links{gap:14px!important;margin-left:12px!important;}
+    .nav-links a{font-size:0.6rem!important;letter-spacing:0.04em!important;}
+    .nav-cta{margin-left:auto!important;font-size:0.68rem!important;padding:7px 12px!important;white-space:nowrap!important;}
     .hero-layout{grid-template-columns:1fr!important;padding:0 20px!important;gap:0!important;}
     .hero-copy{padding-right:0!important;text-align:center!important;}
     .hero-copy h1{margin-bottom:32px!important;}
