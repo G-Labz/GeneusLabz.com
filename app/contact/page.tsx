@@ -12,11 +12,14 @@ function ContactSection() {
       <div className="wrap reveal" style={{position:"relative",zIndex:1}}>
         <div className="lbl"><span className="gt">Contact</span></div>
         <h1 className="st" style={{marginBottom:16}}>
-          Get in <span className="gt">Touch</span>
+          Work With <span className="gt">Us</span>
         </h1>
         <div aria-hidden="true" style={{width:72,height:1,background:"linear-gradient(90deg,var(--dna-pink),var(--dna-blue))",marginBottom:24,opacity:0.55}}/>
-        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580}}>
-          Reach out to the GeneUs Labz team. We build what others won&apos;t dare — let&apos;s connect.
+        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:28}}>
+          GeneUs Labz is open to strategic partnerships, serious collaborators, and aligned creators who are building for the long term. If you understand what we&apos;re doing here and want to be part of it — this is where that conversation starts.
+        </p>
+        <p style={{fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.9,maxWidth:480}}>
+          Strategic partnerships &nbsp;·&nbsp; IP co-development &nbsp;·&nbsp; Talent &amp; operator alignment &nbsp;·&nbsp; Media &amp; distribution
         </p>
       </div>
     </section>

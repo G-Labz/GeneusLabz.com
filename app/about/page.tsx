@@ -45,6 +45,53 @@ function Manifesto() {
 
 
 
+// ─── Founders ─────────────────────────────────────────────────────────────────
+function Founders() {
+  const team=[
+    {
+      num:"01",
+      name:"Marlon",
+      role:"Co-Founder · Creative Director",
+      desc:"Leads product vision, IP development, and creative strategy across all GeneUs Labz build tracks. The reason the studio exists is the work he couldn\u2019t find anywhere else — so he built the place to make it.",
+    },
+    {
+      num:"02",
+      name:"Kisha",
+      role:"Co-Founder · Operating Partner",
+      desc:"Leads operations, talent systems, and the business infrastructure that keeps the studio building at pace. She makes sure the vision has a structure worthy of it.",
+    },
+  ];
+  return (
+    <section aria-label="Studio founders" style={{padding:"0 0 120px",position:"relative"}}>
+      <div className="wrap reveal">
+        <div style={{maxWidth:820,margin:"0 auto"}}>
+          <div className="lbl">The Operators</div>
+          <h2 className="st" style={{marginBottom:20}}>Real people.<br/>Real stakes.</h2>
+          <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.74,maxWidth:540,marginBottom:44}}>
+            GeneUs Labz was founded by two operators who couldn&apos;t find a studio building the kind of cultural IP they believed in. So they built the studio instead. This is not a concept. It is an operating company.
+          </p>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(201,139,10,0.25),rgba(91,168,245,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
+            {team.map((f,i)=>(
+              <div key={i} style={{background:"var(--bg-deep)",padding:"28px 24px",transition:"background 0.18s"}}
+                onMouseEnter={e=>e.currentTarget.style.background="var(--bg-card)"}
+                onMouseLeave={e=>e.currentTarget.style.background="var(--bg-deep)"}
+              >
+                <div style={{fontFamily:"var(--ff-m)",fontSize:"0.52rem",letterSpacing:"0.1em",color:"var(--gold)",marginBottom:9}}>{f.num}</div>
+                <div style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"1.1rem",letterSpacing:"-0.025em",color:"var(--t1)",lineHeight:1.2,marginBottom:6}}>{f.name}</div>
+                <div style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.07em",color:"var(--gold)",marginBottom:14}}>{f.role}</div>
+                <div style={{fontSize:"0.82rem",color:"var(--t2)",lineHeight:1.68}}>{f.desc}</div>
+              </div>
+            ))}
+          </div>
+          <p style={{fontFamily:"var(--ff-m)",fontSize:"0.6rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.7,marginTop:28}}>
+            Independent. Founder-operated. No outside agenda. No borrowed vision.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Root ─────────────────────────────────────────────────────────────────────
 export default function AboutPage() {
   useEffect(()=>{
@@ -61,6 +108,7 @@ export default function AboutPage() {
       <Nav/>
       <main id="main-content" style={{background:"radial-gradient(ellipse 80% 50% at 50% 0%,rgba(91,168,245,0.13) 0%,transparent 55%), radial-gradient(ellipse 50% 35% at 100% 100%,rgba(224,64,160,0.11) 0%,transparent 55%)"}}>
         <Manifesto/>
+        <Founders/>
       </main>
       <Footer/>
     </>

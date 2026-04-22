@@ -93,7 +93,7 @@ function Hero() {
             color:"var(--t2)", lineHeight:1.74,
             maxWidth:380, marginBottom:40,
           }}>
-            This is the lab where ideas are tested, broken, and rebuilt into something that lasts.
+            GeneUs Labz is a venture studio building original products, IP, and systems across gaming, entertainment, and technology. Everything we ship is engineered to last.
           </p>
 
           <p className="ani d3" style={{
