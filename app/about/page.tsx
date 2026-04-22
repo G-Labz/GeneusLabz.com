@@ -25,7 +25,7 @@ function Manifesto() {
           <p style={{fontSize:"1.25rem",fontWeight:500,color:"var(--t2)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
             GeneUs Labz exists to build what others hesitate to start: original systems, worlds, and platforms designed to last.
           </p>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,rgba(91,168,245,0.3),rgba(224,64,160,0.3))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
+          <div className="pillars-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,rgba(91,168,245,0.3),rgba(224,64,160,0.3))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {pillars.map((p,i)=>(
               <div key={i} style={{background:"var(--bg-deep)",padding:"24px 20px",transition:"background 0.18s"}}
                 onMouseEnter={e=>e.currentTarget.style.background="var(--bg-card)"}
@@ -70,7 +70,7 @@ function Founders() {
           <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.74,maxWidth:540,marginBottom:44}}>
             GeneUs Labz was founded by two operators who couldn&apos;t find a studio building the kind of cultural IP they believed in. So they built the studio instead. This is not a concept. It is an operating company.
           </p>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(201,139,10,0.25),rgba(91,168,245,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
+          <div className="founders-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(201,139,10,0.25),rgba(91,168,245,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {team.map((f,i)=>(
               <div key={i} style={{background:"var(--bg-deep)",padding:"28px 24px",transition:"background 0.18s"}}
                 onMouseEnter={e=>e.currentTarget.style.background="var(--bg-card)"}

@@ -21,14 +21,14 @@ function Flagship() {
         background:"radial-gradient(ellipse 72% 60% at 88% 48%, rgba(185,55,18,0.07) 0%, transparent 62%), radial-gradient(ellipse 52% 72% at 8% 40%, rgba(110,60,220,0.06) 0%, transparent 58%), radial-gradient(ellipse 42% 42% at 50% 92%, rgba(210,85,8,0.04) 0%, transparent 68%)",
         pointerEvents:"none",
       }}/>
-      <div className="wrap" style={{padding:"112px 0 96px", position:"relative", zIndex:1}}>
+      <div className="wrap flagship-wrap" style={{padding:"112px 0 96px", position:"relative", zIndex:1}}>
         {/* Label */}
         <div style={{
           fontFamily:"var(--ff-m)", fontSize:"0.57rem", letterSpacing:"0.16em",
           color:"var(--gold)", textTransform:"uppercase", marginBottom:40,
         }}>Flagship IP</div>
         {/* Two-column */}
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:80, alignItems:"center"}}>
+        <div className="flagship-grid" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:80, alignItems:"center"}}>
           {/* LEFT */}
           <div>
             <h2 style={{
@@ -142,7 +142,7 @@ function Metrics() {
   },[counted]);
 
   return (
-    <section aria-label="Company metrics" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"var(--bg-deep)",position:"relative",overflow:"hidden"}}>
+    <section aria-label="Company metrics" className="metrics-section" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"var(--bg-deep)",position:"relative",overflow:"hidden"}}>
       <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 60% 100% at 0% 50%,rgba(91,168,245,0.04) 0%,transparent 55%), radial-gradient(ellipse 50% 100% at 100% 50%,rgba(224,64,160,0.04) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div ref={ref} style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}>
         {data.map((d,i)=>(
@@ -233,7 +233,7 @@ function Tracks() {
   return (
     <section id="tracks" aria-labelledby="tracks-h" style={{padding:"120px 0"}}>
       <div className="wrap">
-        <div className="reveal" style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:52,gap:32}}>
+        <div className="reveal tracks-header" style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:52,gap:32}}>
           <div>
             <div className="lbl">Innovation Tracks</div>
             <h2 className="st" id="tracks-h">Three verticals.<br/>One relentless focus.</h2>
@@ -248,7 +248,7 @@ function Tracks() {
         <div className="reveal" style={{display:"flex",flexDirection:"column",gap:1,background:"var(--border)",border:"1px solid transparent",borderRadius:16,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(91,168,245,0.28),rgba(224,64,160,0.28))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
           {tracks.map((t,i)=>(
             <div key={i}
-              style={{background:"var(--bg-deep)",padding:"38px 40px",display:"grid",gridTemplateColumns:"220px 1fr 1fr",gap:44,alignItems:"center",transition:"background 0.2s",position:"relative",overflow:"hidden"}}
+              className="track-row" style={{background:"var(--bg-deep)",padding:"38px 40px",display:"grid",gridTemplateColumns:"220px 1fr 1fr",gap:44,alignItems:"center",transition:"background 0.2s",position:"relative",overflow:"hidden"}}
               onMouseEnter={e=>{e.currentTarget.style.background="var(--bg-card)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.transform="scaleX(1)";}}
               onMouseLeave={e=>{e.currentTarget.style.background="var(--bg-deep)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.transform="scaleX(0)";}}
             >
@@ -261,7 +261,7 @@ function Tracks() {
                 </div>
               </div>
               <p style={{fontSize:"0.87rem",color:"var(--t2)",lineHeight:1.72}}>{t.desc}</p>
-              <div style={{background:"var(--bg)",borderRadius:10,border:"1px solid var(--border)",overflow:"hidden",padding:"0 8px"}}>
+              <div className="track-viz" style={{background:"var(--bg)",borderRadius:10,border:"1px solid var(--border)",overflow:"hidden",padding:"0 8px"}}>
                 <t.Viz/>
               </div>
             </div>

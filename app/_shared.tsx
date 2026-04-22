@@ -58,6 +58,29 @@ const CSS = `
   .bg:hover,.bg:focus-visible{border-color:rgba(201,139,10,0.35);color:var(--t1);background:var(--gold-dim);outline:none;}
   .bg:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(0,0,0,0.04);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
+  @media(max-width:768px){
+    .wrap{padding:0 20px!important;}
+    .nav-inner{padding:0 20px!important;gap:12px!important;}
+    .nav-links{display:none!important;}
+    .nav-cta{display:none!important;}
+    .hero-layout{grid-template-columns:1fr!important;padding:0 20px!important;gap:0!important;}
+    .hero-copy{padding-right:0!important;text-align:center!important;}
+    .hero-copy h1{margin-bottom:32px!important;}
+    .hero-copy p{max-width:100%!important;}
+    .hero-logo{height:300px!important;margin-right:0!important;}
+    .hero-logo img,.hero-logo-img{width:280px!important;height:280px!important;}
+    .flagship-grid{grid-template-columns:1fr!important;gap:36px!important;}
+    .flagship-wrap{padding:72px 0 60px!important;}
+    .metrics-section{display:none!important;}
+    .tracks-header{flex-direction:column!important;align-items:flex-start!important;gap:16px!important;}
+    .track-row{grid-template-columns:1fr!important;gap:20px!important;padding:24px 20px!important;}
+    .track-viz{display:none!important;}
+    .pillars-grid{grid-template-columns:1fr 1fr!important;}
+    .founders-grid{grid-template-columns:1fr!important;}
+    .footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;}
+    .footer-bottom{flex-direction:column!important;gap:12px!important;align-items:flex-start!important;}
+    .st{font-size:clamp(1.8rem,6vw,2.6rem)!important;}
+  }
 `;
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
@@ -77,14 +100,14 @@ function Nav() {
       backdropFilter: scrolled ? "blur(20px) saturate(1.6)" : "none",
       borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
     }}>
-      <div style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",height:66,display:"flex",alignItems:"center",gap:36}}>
+      <div className="nav-inner" style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",height:66,display:"flex",alignItems:"center",gap:36}}>
         <Link href="/" aria-label="GeneUs Labz — Home" style={{display:"flex",alignItems:"center",gap:9,flexShrink:0}}>
           <img src={LOGO_SRC} alt="" aria-hidden="true" width={34} height={34} style={{objectFit:"contain",display:"block"}}/>
           <span style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"0.97rem",letterSpacing:"-0.02em",color:"var(--t1)"}}>
             Gene<span style={{color:"var(--gold)"}}>Us</span> Labz
           </span>
         </Link>
-        <div role="menubar" style={{display:"flex",gap:26,alignItems:"center"}}>
+        <div className="nav-links" role="menubar" style={{display:"flex",gap:26,alignItems:"center"}}>
           {["About","Work","Blog","Contact"].map(lnk=>(
             <Link key={lnk} href={`/${lnk.toLowerCase()}`} role="menuitem"
               style={{fontFamily:"var(--ff-m)",fontSize:"0.68rem",letterSpacing:"0.07em",color:"var(--t2)",transition:"color 0.15s"}}
@@ -93,7 +116,7 @@ function Nav() {
             >{lnk}</Link>
           ))}
         </div>
-        <Link href="/work" className="bp" style={{marginLeft:"auto",fontSize:"0.76rem",padding:"9px 18px"}}>
+        <Link href="/work" className="bp nav-cta" style={{marginLeft:"auto",fontSize:"0.76rem",padding:"9px 18px"}}>
           <span>View Work</span><span className="arr" aria-hidden="true">→</span>
         </Link>
       </div>
@@ -111,7 +134,7 @@ function Footer() {
   return (
     <footer role="contentinfo" style={{borderTop:"1px solid var(--border)",paddingTop:52,paddingBottom:32}}>
       <div className="wrap">
-        <div style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1fr",gap:44,marginBottom:48}}>
+        <div className="footer-grid" style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1fr",gap:44,marginBottom:48}}>
           <div>
             <Link href="/" aria-label="GeneUs Labz home" style={{display:"flex",alignItems:"center",gap:8,marginBottom:16}}>
               <img src={LOGO_SRC} alt="" aria-hidden="true" width={28} height={28} style={{objectFit:"contain"}}/>
@@ -147,7 +170,7 @@ function Footer() {
             </nav>
           ))}
         </div>
-        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:24,borderTop:"1px solid var(--border)"}}>
+        <div className="footer-bottom" style={{display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:24,borderTop:"1px solid var(--border)"}}>
           <span style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>© 2024–2026 GeneUs Labz. All rights reserved.</span>
           <nav aria-label="Legal links" style={{display:"flex",gap:20}}>
             {[["Privacy","/privacy"],["Terms","/terms"],["Accessibility","/accessibility"]].map(([lbl,href])=>(

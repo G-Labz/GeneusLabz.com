@@ -60,7 +60,7 @@ function Hero() {
       </div>
 
       {/* ── Content — intentionally right-heavy ── */}
-      <div style={{
+      <div className="hero-layout" style={{
         maxWidth:1240, margin:"0 auto",
         padding:"0 0 0 56px",
         display:"grid",
@@ -72,7 +72,7 @@ function Hero() {
       }}>
 
         {/* ── Copy column ── */}
-        <div style={{paddingRight:16}}>
+        <div className="hero-copy" style={{paddingRight:16}}>
           <h1
             className="ani d1"
             style={{
@@ -107,7 +107,7 @@ function Hero() {
 
         {/* ── Logo column — bleeds past right edge ── */}
         <div
-          className="ani d4"
+          className="ani d4 hero-logo"
           aria-hidden="true"
           style={{
             display:"flex", alignItems:"center", justifyContent:"center",
@@ -206,6 +206,7 @@ function Hero() {
 
           {/* The logo — primary focal element */}
           <img
+            className="hero-logo-img"
             src={LOGO_SRC}
             alt="GeneUs Labz"
             width={520}
