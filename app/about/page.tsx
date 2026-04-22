@@ -22,10 +22,10 @@ function Manifesto() {
             &ldquo;We don&apos;t follow roads.<br/>
             <span className="gt">We build them.&rdquo;</span>
           </blockquote>
-          <p style={{fontSize:"1.25rem",fontWeight:500,color:"rgba(215,222,240,0.94)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
+          <p style={{fontSize:"1.25rem",fontWeight:500,color:"var(--t2)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
             GeneUs Labz exists to build what others hesitate to start — original systems, worlds, and platforms designed to last.
           </p>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:2,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg-deep),var(--bg-deep)),linear-gradient(90deg,rgba(91,168,245,0.25),rgba(224,64,160,0.25))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,rgba(91,168,245,0.3),rgba(224,64,160,0.3))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {pillars.map((p,i)=>(
               <div key={i} style={{background:"var(--bg-deep)",padding:"24px 20px",transition:"background 0.18s"}}
                 onMouseEnter={e=>e.currentTarget.style.background="var(--bg-card)"}

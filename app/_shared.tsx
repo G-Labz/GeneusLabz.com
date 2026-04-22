@@ -10,9 +10,9 @@ const CSS = `
     --gold:     #C98B0A; --gold-lt: #EBA820;
     --gold-dim: rgba(201,139,10,0.09); --gold-glow: rgba(201,139,10,0.20);
     --dna-blue: #5BA8F5; --dna-pink: #E040A0;
-    --bg:       #040810; --bg-deep: #060b16; --bg-card: #0b1220; --bg-hi: #0f1628;
-    --border:   rgba(255,255,255,0.06); --border-hi: rgba(255,255,255,0.10);
-    --t1:#f0f4ff; --t2:#8b96b0; --t3:#46536a;
+    --bg:       #f5f6f8; --bg-deep: #edf0f5; --bg-card: #ffffff; --bg-hi: #e8ecf3;
+    --border:   rgba(0,0,0,0.07); --border-hi: rgba(0,0,0,0.12);
+    --t1:#1c1f2e; --t2:#50577a; --t3:#8592b0;
     --ff-d:'Epilogue',sans-serif; --ff-b:'Instrument Sans',sans-serif; --ff-m:'Fira Code',monospace;
     --ease: cubic-bezier(0.16,1,0.3,1);
   }
@@ -55,10 +55,10 @@ const CSS = `
   .bp:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px;}
   .bp .arr{transition:transform 0.18s;}
   .bp:hover .arr{transform:translateX(4px);}
-  .bg{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:9px;cursor:pointer;font-family:var(--ff-d);font-weight:600;font-size:0.88rem;color:var(--t2);border:1px solid var(--border-hi);background:rgba(255,255,255,0.02);transition:border-color 0.18s,color 0.18s,background 0.18s;}
+  .bg{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:9px;cursor:pointer;font-family:var(--ff-d);font-weight:600;font-size:0.88rem;color:var(--t2);border:1px solid var(--border-hi);background:rgba(0,0,0,0.02);transition:border-color 0.18s,color 0.18s,background 0.18s;}
   .bg:hover,.bg:focus-visible{border-color:rgba(201,139,10,0.35);color:var(--t1);background:var(--gold-dim);outline:none;}
   .bg:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
-  .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
+  .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(0,0,0,0.04);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
 `;
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
@@ -74,8 +74,8 @@ function Nav() {
     <nav role="navigation" aria-label="Main navigation" style={{
       position:"fixed",top:0,left:0,right:0,zIndex:100,
       transition:"background 0.3s,border-color 0.3s,backdrop-filter 0.3s",
-      background: scrolled ? "rgba(4,8,16,0.92)" : "transparent",
-      backdropFilter: scrolled ? "blur(18px) saturate(1.4)" : "none",
+      background: scrolled ? "rgba(245,246,248,0.94)" : "transparent",
+      backdropFilter: scrolled ? "blur(18px) saturate(1.3)" : "none",
       borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
     }}>
       <div style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",height:66,display:"flex",alignItems:"center",gap:36}}>
@@ -126,9 +126,9 @@ function Footer() {
             <nav aria-label="Social media links" style={{display:"flex",gap:7}}>
               {[["𝕏","Twitter"],["◎","Instagram"],["in","LinkedIn"],["⌘","Discord"]].map(([icon,lbl])=>(
                 <a key={lbl} href="#" aria-label={lbl}
-                  style={{width:30,height:30,borderRadius:7,background:"rgba(255,255,255,0.03)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s"}}
+                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s"}}
                   onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
-                  onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.03)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
+                  onMouseLeave={e=>{e.currentTarget.style.background="rgba(0,0,0,0.04)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
                 >{icon}</a>
               ))}
             </nav>

@@ -34,7 +34,7 @@ function Hero() {
         {/* Grid — right-biased, gives logo a surface to sit on */}
         <div style={{
           position:"absolute",inset:0,
-          backgroundImage:"linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px)",
+          backgroundImage:"linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px)",
           backgroundSize:"72px 72px",
           maskImage:"radial-gradient(ellipse 85% 85% at 72% 52%,black 0%,transparent 72%)",
           WebkitMaskImage:"radial-gradient(ellipse 85% 85% at 72% 52%,black 0%,transparent 72%)",
@@ -106,12 +106,12 @@ function Hero() {
             marginRight:"-56px",
           }}
         >
-          {/* Stage — dark circle that anchors the logo spatially */}
+          {/* Stage — soft warm halo anchors the logo spatially */}
           <div style={{
             position:"absolute",
             width:480, height:480,
             borderRadius:"50%",
-            background:"radial-gradient(circle,rgba(4,8,16,0.55) 0%,transparent 72%)",
+            background:"radial-gradient(circle,rgba(201,139,10,0.06) 0%,rgba(91,168,245,0.03) 50%,transparent 72%)",
           }}/>
 
           {/* Wide outer corona — slow pulse */}
@@ -162,7 +162,7 @@ function Hero() {
             position:"absolute",
             width:320, height:32,
             borderRadius:"50%",
-            background:"radial-gradient(ellipse,rgba(0,0,0,0.5) 0%,transparent 70%)",
+            background:"radial-gradient(ellipse,rgba(0,0,0,0.14) 0%,transparent 70%)",
             filter:"blur(12px)",
             bottom:"72px", left:"50%", transform:"translateX(-50%)",
           }}/>

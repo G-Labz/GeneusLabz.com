@@ -12,13 +12,13 @@ function Flagship() {
   return (
     <section className="reveal" style={{
       position:"relative",
-      background:"linear-gradient(160deg, #08041a 0%, #050310 40%, #0a0518 70%, #06020f 100%)",
+      background:"linear-gradient(160deg, #f8f7f5 0%, #f6f4fa 50%, #f8f5f3 100%)",
       overflow:"hidden",
     }}>
       {/* Atmospheric depth */}
       <div aria-hidden="true" style={{
         position:"absolute", inset:0,
-        background:"radial-gradient(ellipse 72% 60% at 88% 48%, rgba(185,55,18,0.14) 0%, transparent 62%), radial-gradient(ellipse 52% 72% at 8% 40%, rgba(55,25,145,0.16) 0%, transparent 58%), radial-gradient(ellipse 42% 42% at 50% 92%, rgba(210,85,8,0.09) 0%, transparent 68%)",
+        background:"radial-gradient(ellipse 72% 60% at 88% 48%, rgba(185,55,18,0.07) 0%, transparent 62%), radial-gradient(ellipse 52% 72% at 8% 40%, rgba(110,60,220,0.06) 0%, transparent 58%), radial-gradient(ellipse 42% 42% at 50% 92%, rgba(210,85,8,0.04) 0%, transparent 68%)",
         pointerEvents:"none",
       }}/>
       <div className="wrap" style={{padding:"112px 0 96px", position:"relative", zIndex:1}}>
@@ -40,12 +40,12 @@ function Flagship() {
             }}>ShangoMaji</h2>
             <p style={{
               fontFamily:"var(--ff-b)", fontWeight:500, fontSize:"1.12rem",
-              color:"rgba(210,195,255,0.82)", lineHeight:1.55, marginBottom:30, maxWidth:430,
+              color:"var(--t1)", lineHeight:1.55, marginBottom:30, maxWidth:430,
             }}>A global anime culture network centered on Afro influence, creativity, and storytelling.</p>
             <p style={{
               fontFamily:"var(--ff-b)", fontWeight:400, fontSize:"0.93rem",
-              color:"rgba(190,178,215,0.65)", lineHeight:1.7, marginBottom:44,
-              paddingLeft:14, borderLeft:"2px solid rgba(245,166,35,0.28)",
+              color:"var(--t2)", lineHeight:1.7, marginBottom:44,
+              paddingLeft:14, borderLeft:"2px solid rgba(245,166,35,0.35)",
             }}>
               Proof of what&apos;s possible when culture, craft, and community are built into the foundation — not added later.
             </p>
@@ -86,7 +86,7 @@ function Flagship() {
                 <div key={alt} style={{
                   borderRadius:11, overflow:"hidden",
                   border:"1px solid rgba(245,166,35,0.13)",
-                  boxShadow:"0 8px 36px rgba(0,0,0,0.55)",
+                  boxShadow:"0 2px 16px rgba(0,0,0,0.10)",
                 }}>
                   <img src={src} alt={alt} style={{width:"100%", height:164, objectFit:"cover", display:"block"}}/>
                 </div>
@@ -142,7 +142,7 @@ function Metrics() {
   },[counted]);
 
   return (
-    <section aria-label="Company metrics" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"rgba(255,255,255,0.008)",position:"relative",overflow:"hidden"}}>
+    <section aria-label="Company metrics" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"var(--bg-deep)",position:"relative",overflow:"hidden"}}>
       <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 60% 100% at 0% 50%,rgba(91,168,245,0.04) 0%,transparent 55%), radial-gradient(ellipse 50% 100% at 100% 50%,rgba(224,64,160,0.04) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div ref={ref} style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}>
         {data.map((d,i)=>(
@@ -245,7 +245,7 @@ function Tracks() {
           >View Our Work <span aria-hidden="true">→</span></a>
         </div>
 
-        <div className="reveal" style={{display:"flex",flexDirection:"column",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:16,overflow:"hidden",backgroundImage:"linear-gradient(var(--border),var(--border)),linear-gradient(135deg,rgba(91,168,245,0.2),rgba(224,64,160,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
+        <div className="reveal" style={{display:"flex",flexDirection:"column",gap:1,background:"var(--border)",border:"1px solid transparent",borderRadius:16,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(91,168,245,0.28),rgba(224,64,160,0.28))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
           {tracks.map((t,i)=>(
             <div key={i}
               style={{background:"var(--bg-deep)",padding:"38px 40px",display:"grid",gridTemplateColumns:"220px 1fr 1fr",gap:44,alignItems:"center",transition:"background 0.2s",position:"relative",overflow:"hidden"}}
