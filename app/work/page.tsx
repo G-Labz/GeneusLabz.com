@@ -142,7 +142,8 @@ function Metrics() {
   },[counted]);
 
   return (
-    <section aria-label="Company metrics" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"rgba(255,255,255,0.008)"}}>
+    <section aria-label="Company metrics" style={{borderTop:"1px solid var(--border)",borderBottom:"1px solid var(--border)",background:"rgba(255,255,255,0.008)",position:"relative",overflow:"hidden"}}>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 60% 100% at 0% 50%,rgba(91,168,245,0.04) 0%,transparent 55%), radial-gradient(ellipse 50% 100% at 100% 50%,rgba(224,64,160,0.04) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div ref={ref} style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}>
         {data.map((d,i)=>(
           <div key={i}
@@ -244,7 +245,7 @@ function Tracks() {
           >View Our Work <span aria-hidden="true">→</span></a>
         </div>
 
-        <div className="reveal" style={{display:"flex",flexDirection:"column",gap:2,background:"var(--border)",border:"1px solid var(--border)",borderRadius:16,overflow:"hidden"}}>
+        <div className="reveal" style={{display:"flex",flexDirection:"column",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:16,overflow:"hidden",backgroundImage:"linear-gradient(var(--border),var(--border)),linear-gradient(135deg,rgba(91,168,245,0.2),rgba(224,64,160,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
           {tracks.map((t,i)=>(
             <div key={i}
               style={{background:"var(--bg-deep)",padding:"38px 40px",display:"grid",gridTemplateColumns:"220px 1fr 1fr",gap:44,alignItems:"center",transition:"background 0.2s",position:"relative",overflow:"hidden"}}
@@ -278,7 +279,7 @@ function WorkHeader() {
     <section style={{padding:"100px 0 0",position:"relative",overflow:"hidden"}}>
       <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 60% at 50% 55%,rgba(91,168,245,0.05) 0%,rgba(224,64,160,0.03) 55%,transparent 72%)",pointerEvents:"none"}}/>
       <div className="wrap reveal" style={{position:"relative",zIndex:1,textAlign:"center"}}>
-        <div className="lbl">Our Work</div>
+        <div className="lbl"><span className="gt">Our Work</span></div>
         <h1 className="st" style={{marginBottom:16}}>
           Built under the <span className="gt">GeneUs Labz</span> banner.
         </h1>
@@ -304,7 +305,7 @@ export default function WorkPage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content">
+      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 35% at 50% 0%,rgba(91,168,245,0.05) 0%,rgba(224,64,160,0.03) 55%,transparent 70%)"}}>
         <WorkHeader/>
         <Flagship/>
         <Metrics/>

@@ -12,10 +12,12 @@ function Manifesto() {
   ];
   return (
     <section aria-label="Brand manifesto" style={{padding:"120px 0",position:"relative",overflow:"hidden"}}>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 55% 50% at 50% 50%,rgba(91,168,245,0.03) 0%,transparent 70%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 55% at 50% 50%,rgba(91,168,245,0.06) 0%,transparent 70%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 40% 35% at 92% 15%,rgba(255,0,128,0.07) 0%,transparent 55%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 35% 30% at 5% 85%,rgba(0,170,255,0.06) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div className="wrap reveal" style={{position:"relative",zIndex:1}}>
         <div style={{maxWidth:820,margin:"0 auto",textAlign:"center"}}>
-          <p style={{fontFamily:"var(--ff-m)",fontSize:"0.6rem",letterSpacing:"0.13em",color:"var(--t3)",textTransform:"uppercase",marginBottom:32}}>Our Philosophy</p>
+          <p style={{fontFamily:"var(--ff-m)",fontSize:"0.6rem",letterSpacing:"0.13em",textTransform:"uppercase",marginBottom:32,background:"linear-gradient(90deg,var(--dna-blue),var(--dna-pink))",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",display:"inline-block"}}>Our Philosophy</p>
           <blockquote style={{fontFamily:"var(--ff-d)",fontWeight:900,fontSize:"clamp(2.1rem,5vw,3.9rem)",letterSpacing:"-0.04em",lineHeight:1.0,color:"var(--t1)",marginBottom:26}}>
             &ldquo;We don&apos;t follow roads.<br/>
             <span className="gt">We build them.&rdquo;</span>
@@ -23,7 +25,7 @@ function Manifesto() {
           <p style={{fontSize:"1.25rem",fontWeight:500,color:"rgba(215,222,240,0.94)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
             GeneUs Labz exists to build what others hesitate to start — original systems, worlds, and platforms designed to last.
           </p>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:2,marginTop:60,background:"var(--border)",border:"1px solid var(--border)",borderRadius:12,overflow:"hidden",textAlign:"left"}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:2,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg-deep),var(--bg-deep)),linear-gradient(90deg,rgba(91,168,245,0.25),rgba(224,64,160,0.25))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {pillars.map((p,i)=>(
               <div key={i} style={{background:"var(--bg-deep)",padding:"24px 20px",transition:"background 0.18s"}}
                 onMouseEnter={e=>e.currentTarget.style.background="var(--bg-card)"}
@@ -57,7 +59,7 @@ export default function AboutPage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content" style={{background:"radial-gradient(ellipse 70% 45% at 50% 0%,rgba(91,168,245,0.04) 0%,transparent 55%)"}}>
+      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 50% at 50% 0%,rgba(91,168,245,0.06) 0%,transparent 55%), radial-gradient(ellipse 50% 35% at 100% 100%,rgba(255,0,128,0.05) 0%,transparent 55%)"}}>
         <Manifesto/>
       </main>
       <Footer/>

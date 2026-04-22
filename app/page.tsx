@@ -25,7 +25,11 @@ function Hero() {
 
         {/* DNA blue lower right accent */}
         <div style={{position:"absolute",inset:0,background:
-          "radial-gradient(ellipse 38% 28% at 90% 85%,rgba(91,168,245,0.05) 0%,transparent 60%)"}}/>
+          "radial-gradient(ellipse 38% 28% at 90% 85%,rgba(91,168,245,0.07) 0%,transparent 60%)"}}/>
+
+        {/* DNA pink upper left ambient */}
+        <div style={{position:"absolute",inset:0,background:
+          "radial-gradient(ellipse 45% 35% at 0% 0%,rgba(255,0,128,0.06) 0%,transparent 55%)"}}/>
 
         {/* Grid — right-biased, gives logo a surface to sit on */}
         <div style={{
@@ -234,7 +238,7 @@ export default function HomePage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content">
+      <main id="main-content" style={{background:"radial-gradient(ellipse 90% 40% at 50% 100%,rgba(91,168,245,0.04) 0%,transparent 60%)"}}>
         <Hero/>
       </main>
       <Footer/>
