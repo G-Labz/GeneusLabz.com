@@ -296,11 +296,16 @@ function Hero() {
             alt="GeneUs Labz"
             width={520}
             height={520}
+            draggable={false}
+            onDragStart={e=>e.preventDefault()}
             style={{
               objectFit:"contain",
               position:"relative", zIndex:2,
               animation:"float 14s ease-in-out infinite",
               transformOrigin:"center center",
+              userSelect:"none",
+              WebkitUserSelect:"none",
+              pointerEvents:"none",
               filter:[
                 "drop-shadow(0 0 60px rgba(201,139,10,0.38))",
                 "drop-shadow(0 32px 80px rgba(201,139,10,0.20))",
