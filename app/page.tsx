@@ -1,8 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import { CSS, LOGO_SRC, Nav, Footer } from "./_shared";
+import { CSS, Nav, Footer } from "./_shared";
 
-// ─── Hero ─────────────────────────────────────────────────────────────────────
+const LOGO_SRC = "/logo.png";
+
 function Hero() {
   return (
     <section
@@ -229,7 +230,7 @@ export default function HomePage() {
   useEffect(()=>{
     const els=document.querySelectorAll(".reveal");
     const obs=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");obs.unobserve(e.target);}});
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");obs.unobserve(e.target);}}); 
     },{threshold:0.07,rootMargin:"0px 0px -32px 0px"});
     els.forEach(el=>obs.observe(el));
     return()=>obs.disconnect();
@@ -245,3 +246,4 @@ export default function HomePage() {
     </>
   );
 }
+

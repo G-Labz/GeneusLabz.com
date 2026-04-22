@@ -3,16 +3,25 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const LOGO_SRC = "/logo.png";
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@300;400;500&display=swap');
   :root {
     --gold:     #C98B0A; --gold-lt: #EBA820;
     --gold-dim: rgba(201,139,10,0.09); --gold-glow: rgba(201,139,10,0.20);
     --dna-blue: #5BA8F5; --dna-pink: #E040A0;
+<<<<<<< HEAD
     --bg:       #f5f6f8; --bg-deep: #edf0f5; --bg-card: #ffffff; --bg-hi: #e8ecf3;
     --border:   rgba(0,0,0,0.07); --border-hi: rgba(0,0,0,0.12);
     --t1:#1c1f2e; --t2:#50577a; --t3:#8592b0;
+=======
+    --bg:       #040810; --bg-deep: #060b16; --bg-card: #0b1220; --bg-hi: #0f1628;
+    --border:   rgba(255,255,255,0.06); --border-hi: rgba(255,255,255,0.10);
+    --t1:#f0f4ff; --t2:#8b96b0; --t3:#46536a;
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
     --ff-d:'Epilogue',sans-serif; --ff-b:'Instrument Sans',sans-serif; --ff-m:'Fira Code',monospace;
     --ease: cubic-bezier(0.16,1,0.3,1);
   }
@@ -55,10 +64,17 @@ const CSS = `
   .bp:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px;}
   .bp .arr{transition:transform 0.18s;}
   .bp:hover .arr{transform:translateX(4px);}
+<<<<<<< HEAD
   .bg{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:9px;cursor:pointer;font-family:var(--ff-d);font-weight:600;font-size:0.88rem;color:var(--t2);border:1px solid var(--border-hi);background:rgba(0,0,0,0.02);transition:border-color 0.18s,color 0.18s,background 0.18s;}
   .bg:hover,.bg:focus-visible{border-color:rgba(201,139,10,0.35);color:var(--t1);background:var(--gold-dim);outline:none;}
   .bg:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
   .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(0,0,0,0.04);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
+=======
+  .bg{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:9px;cursor:pointer;font-family:var(--ff-d);font-weight:600;font-size:0.88rem;color:var(--t2);border:1px solid var(--border-hi);background:rgba(255,255,255,0.02);transition:border-color 0.18s,color 0.18s,background 0.18s;}
+  .bg:hover,.bg:focus-visible{border-color:rgba(201,139,10,0.35);color:var(--t1);background:var(--gold-dim);outline:none;}
+  .bg:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .tag{font-family:var(--ff-m);font-size:0.57rem;letter-spacing:0.05em;color:var(--t3);background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
 `;
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
@@ -74,8 +90,13 @@ function Nav() {
     <nav role="navigation" aria-label="Main navigation" style={{
       position:"fixed",top:0,left:0,right:0,zIndex:100,
       transition:"background 0.3s,border-color 0.3s,backdrop-filter 0.3s",
+<<<<<<< HEAD
       background: scrolled ? "rgba(245,246,248,0.94)" : "transparent",
       backdropFilter: scrolled ? "blur(18px) saturate(1.3)" : "none",
+=======
+      background: scrolled ? "rgba(4,8,16,0.92)" : "transparent",
+      backdropFilter: scrolled ? "blur(18px) saturate(1.4)" : "none",
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
       borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
     }}>
       <div style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",height:66,display:"flex",alignItems:"center",gap:36}}>
@@ -114,21 +135,35 @@ function Footer() {
       <div className="wrap">
         <div style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1fr",gap:44,marginBottom:48}}>
           <div>
+<<<<<<< HEAD
             <a href="/" aria-label="GeneUs Labz home" style={{display:"flex",alignItems:"center",gap:8,marginBottom:16}}>
+=======
+            <Link href="/" aria-label="GeneUs Labz home" style={{display:"flex",alignItems:"center",gap:8,marginBottom:16}}>
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
               <img src={LOGO_SRC} alt="" aria-hidden="true" width={28} height={28} style={{objectFit:"contain"}}/>
               <span style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"0.93rem",letterSpacing:"-0.02em",color:"var(--t1)"}}>
                 Gene<span style={{color:"var(--gold)"}}>Us</span> Labz
               </span>
+<<<<<<< HEAD
             </a>
+=======
+            </Link>
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
             <p style={{fontSize:"0.82rem",color:"var(--t3)",lineHeight:1.7,maxWidth:230,marginBottom:20}}>
               GeneUs Labz builds original systems, worlds, and platforms across culture, technology, and media.
             </p>
             <nav aria-label="Social media links" style={{display:"flex",gap:7}}>
               {[["𝕏","Twitter"],["◎","Instagram"],["in","LinkedIn"],["⌘","Discord"]].map(([icon,lbl])=>(
                 <a key={lbl} href="#" aria-label={lbl}
+<<<<<<< HEAD
                   style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s"}}
                   onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
                   onMouseLeave={e=>{e.currentTarget.style.background="rgba(0,0,0,0.04)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
+=======
+                  style={{width:30,height:30,borderRadius:7,background:"rgba(255,255,255,0.03)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s"}}
+                  onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
+                  onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.03)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
                 >{icon}</a>
               ))}
             </nav>
@@ -138,10 +173,17 @@ function Footer() {
               <h3 style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.12em",color:"var(--t3)",textTransform:"uppercase",marginBottom:16}}>{col.h}</h3>
               <ul style={{display:"flex",flexDirection:"column",gap:10}}>
                 {col.links.map(([lbl,href])=>(
+<<<<<<< HEAD
                   <li key={lbl}><a href={href} style={{fontSize:"0.82rem",color:"var(--t2)",transition:"color 0.14s"}}
                     onMouseEnter={e=>e.currentTarget.style.color="var(--t1)"}
                     onMouseLeave={e=>e.currentTarget.style.color="var(--t2)"}
                   >{lbl}</a></li>
+=======
+                  <li key={lbl}><Link href={href} style={{fontSize:"0.82rem",color:"var(--t2)",transition:"color 0.14s"}}
+                    onMouseEnter={e=>e.currentTarget.style.color="var(--t1)"}
+                    onMouseLeave={e=>e.currentTarget.style.color="var(--t2)"}
+                  >{lbl}</Link></li>
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
                 ))}
               </ul>
             </nav>
@@ -151,10 +193,17 @@ function Footer() {
           <span style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>© 2024–2026 GeneUs Labz. All rights reserved.</span>
           <nav aria-label="Legal links" style={{display:"flex",gap:20}}>
             {[["Privacy","/privacy"],["Terms","/terms"],["Accessibility","/accessibility"]].map(([lbl,href])=>(
+<<<<<<< HEAD
               <a key={lbl} href={href} style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)",transition:"color 0.14s"}}
                 onMouseEnter={e=>e.currentTarget.style.color="var(--t2)"}
                 onMouseLeave={e=>e.currentTarget.style.color="var(--t3)"}
               >{lbl}</a>
+=======
+              <Link key={lbl} href={href} style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)",transition:"color 0.14s"}}
+                onMouseEnter={e=>e.currentTarget.style.color="var(--t2)"}
+                onMouseLeave={e=>e.currentTarget.style.color="var(--t3)"}
+              >{lbl}</Link>
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
             ))}
           </nav>
         </div>
@@ -163,5 +212,9 @@ function Footer() {
   );
 }
 
+<<<<<<< HEAD
 
 export { CSS, LOGO_SRC, Nav, Footer };
+=======
+export { Nav, Footer, CSS, LOGO_SRC };
+>>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)

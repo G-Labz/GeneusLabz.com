@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(npx tsc *)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C /Users/nov3lty/Documents/geneus-labz show HEAD:app/page.tsx)",
+      "Bash(npx next *)"
     ]
   }
 }
