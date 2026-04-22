@@ -272,6 +272,24 @@ function Tracks() {
 }
 
 
+// ─── Work Header ──────────────────────────────────────────────────────────────
+function WorkHeader() {
+  return (
+    <section style={{padding:"100px 0 0",position:"relative",overflow:"hidden"}}>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 60% at 50% 55%,rgba(91,168,245,0.05) 0%,rgba(224,64,160,0.03) 55%,transparent 72%)",pointerEvents:"none"}}/>
+      <div className="wrap reveal" style={{position:"relative",zIndex:1,textAlign:"center"}}>
+        <div className="lbl">Our Work</div>
+        <h1 className="st" style={{marginBottom:16}}>
+          Built under the <span className="gt">GeneUs Labz</span> banner.
+        </h1>
+        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:560,margin:"0 auto"}}>
+          Every project we ship — from interactive worlds to media platforms — is engineered for legacy.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 // ─── Root ─────────────────────────────────────────────────────────────────────
 export default function WorkPage() {
   useEffect(()=>{
@@ -287,6 +305,7 @@ export default function WorkPage() {
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
       <main id="main-content">
+        <WorkHeader/>
         <Flagship/>
         <Metrics/>
         <Tracks/>

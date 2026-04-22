@@ -57,7 +57,7 @@ export default function AboutPage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content">
+      <main id="main-content" style={{background:"radial-gradient(ellipse 70% 45% at 50% 0%,rgba(91,168,245,0.04) 0%,transparent 55%)"}}>
         <Manifesto/>
       </main>
       <Footer/>
