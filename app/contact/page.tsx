@@ -6,9 +6,9 @@ import { CSS, Nav, Footer } from "../_shared";
 function ContactSection() {
   return (
     <section style={{padding:"120px 0",minHeight:"calc(100vh - 66px)",position:"relative",overflow:"hidden"}}>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 55% 60% at 85% 25%,rgba(255,0,128,0.08) 0%,transparent 60%)",pointerEvents:"none"}}/>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 50% 55% at 8% 75%,rgba(0,170,255,0.07) 0%,transparent 60%)",pointerEvents:"none"}}/>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 70% 30% at 50% 100%,rgba(224,64,160,0.04) 0%,transparent 55%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 55% 60% at 85% 25%,rgba(224,64,160,0.14) 0%,transparent 60%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 50% 55% at 8% 75%,rgba(91,168,245,0.13) 0%,transparent 60%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 70% 30% at 50% 100%,rgba(224,64,160,0.08) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div className="wrap reveal" style={{position:"relative",zIndex:1}}>
         <div className="lbl"><span className="gt">Contact</span></div>
         <h1 className="st" style={{marginBottom:16}}>
@@ -38,7 +38,7 @@ export default function ContactPage() {
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
-      <main id="main-content" style={{background:"radial-gradient(ellipse 85% 45% at 50% 0%,rgba(255,0,128,0.05) 0%,transparent 55%), radial-gradient(ellipse 55% 40% at 0% 100%,rgba(0,170,255,0.05) 0%,transparent 55%)"}}>
+      <main id="main-content" style={{background:"radial-gradient(ellipse 85% 45% at 50% 0%,rgba(224,64,160,0.12) 0%,transparent 55%), radial-gradient(ellipse 55% 40% at 0% 100%,rgba(91,168,245,0.11) 0%,transparent 55%)"}}>
         <ContactSection/>
       </main>
       <Footer/>

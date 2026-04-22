@@ -22,15 +22,24 @@ function Hero() {
 
         {/* Primary logo corona — strong, right-anchored */}
         <div style={{position:"absolute",inset:0,background:
-          "radial-gradient(ellipse 62% 72% at 80% 50%,rgba(201,139,10,0.09) 0%,rgba(91,168,245,0.04) 52%,transparent 70%)"}}/>
+          "radial-gradient(ellipse 62% 72% at 80% 50%,rgba(201,139,10,0.07) 0%,rgba(91,168,245,0.11) 52%,transparent 70%)"}}/>
 
         {/* DNA blue lower right accent */}
         <div style={{position:"absolute",inset:0,background:
-          "radial-gradient(ellipse 38% 28% at 90% 85%,rgba(91,168,245,0.07) 0%,transparent 60%)"}}/>
+          "radial-gradient(ellipse 38% 28% at 90% 85%,rgba(91,168,245,0.14) 0%,transparent 60%)"}}/>
 
         {/* DNA pink upper left ambient */}
         <div style={{position:"absolute",inset:0,background:
-          "radial-gradient(ellipse 45% 35% at 0% 0%,rgba(255,0,128,0.06) 0%,transparent 55%)"}}/>
+          "radial-gradient(ellipse 45% 35% at 0% 0%,rgba(224,64,160,0.13) 0%,transparent 55%)"}}/>
+
+        {/* DNA pink lower left accent */}
+        <div style={{position:"absolute",inset:0,background:
+          "radial-gradient(ellipse 30% 40% at 0% 80%,rgba(224,64,160,0.08) 0%,transparent 55%)"}}/>
+
+        {/* DNA blue upper right accent */}
+        <div style={{position:"absolute",inset:0,background:
+          "radial-gradient(ellipse 28% 30% at 100% 10%,rgba(91,168,245,0.10) 0%,transparent 60%)"}}/>
+
 
         {/* Grid — right-biased, gives logo a surface to sit on */}
         <div style={{

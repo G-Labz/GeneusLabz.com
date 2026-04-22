@@ -12,9 +12,9 @@ function Manifesto() {
   ];
   return (
     <section aria-label="Brand manifesto" style={{padding:"120px 0",position:"relative",overflow:"hidden"}}>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 55% at 50% 50%,rgba(91,168,245,0.06) 0%,transparent 70%)",pointerEvents:"none"}}/>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 40% 35% at 92% 15%,rgba(255,0,128,0.07) 0%,transparent 55%)",pointerEvents:"none"}}/>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 35% 30% at 5% 85%,rgba(0,170,255,0.06) 0%,transparent 55%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 55% at 50% 50%,rgba(91,168,245,0.12) 0%,transparent 70%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 40% 35% at 92% 15%,rgba(224,64,160,0.13) 0%,transparent 55%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 35% 30% at 5% 85%,rgba(91,168,245,0.11) 0%,transparent 55%)",pointerEvents:"none"}}/>
       <div className="wrap reveal" style={{position:"relative",zIndex:1}}>
         <div style={{maxWidth:820,margin:"0 auto",textAlign:"center"}}>
           <p style={{fontFamily:"var(--ff-m)",fontSize:"0.6rem",letterSpacing:"0.13em",textTransform:"uppercase",marginBottom:32,background:"linear-gradient(90deg,var(--dna-blue),var(--dna-pink))",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",display:"inline-block"}}>Our Philosophy</p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 50% at 50% 0%,rgba(91,168,245,0.06) 0%,transparent 55%), radial-gradient(ellipse 50% 35% at 100% 100%,rgba(255,0,128,0.05) 0%,transparent 55%)"}}>
+      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 50% at 50% 0%,rgba(91,168,245,0.13) 0%,transparent 55%), radial-gradient(ellipse 50% 35% at 100% 100%,rgba(224,64,160,0.11) 0%,transparent 55%)"}}>
         <Manifesto/>
       </main>
       <Footer/>

@@ -277,7 +277,7 @@ function Tracks() {
 function WorkHeader() {
   return (
     <section style={{padding:"100px 0 0",position:"relative",overflow:"hidden"}}>
-      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 60% at 50% 55%,rgba(91,168,245,0.05) 0%,rgba(224,64,160,0.03) 55%,transparent 72%)",pointerEvents:"none"}}/>
+      <div aria-hidden="true" style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 65% 60% at 50% 55%,rgba(91,168,245,0.12) 0%,rgba(224,64,160,0.09) 55%,transparent 72%)",pointerEvents:"none"}}/>
       <div className="wrap reveal" style={{position:"relative",zIndex:1,textAlign:"center"}}>
         <div className="lbl"><span className="gt">Our Work</span></div>
         <h1 className="st" style={{marginBottom:16}}>
@@ -305,7 +305,7 @@ export default function WorkPage() {
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
       <Nav/>
-      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 35% at 50% 0%,rgba(91,168,245,0.05) 0%,rgba(224,64,160,0.03) 55%,transparent 70%)"}}>
+      <main id="main-content" style={{background:"radial-gradient(ellipse 80% 35% at 50% 0%,rgba(91,168,245,0.12) 0%,rgba(224,64,160,0.08) 55%,transparent 70%)"}}>
         <WorkHeader/>
         <Flagship/>
         <Metrics/>
