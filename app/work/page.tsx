@@ -47,7 +47,7 @@ function Flagship() {
               color:"var(--t2)", lineHeight:1.7, marginBottom:44,
               paddingLeft:14, borderLeft:"2px solid rgba(245,166,35,0.35)",
             }}>
-              Proof of what&apos;s possible when culture, craft, and community are built into the foundation — not added later.
+              Proof of what&apos;s possible when culture, craft, and community are built into the foundation, not added later.
             </p>
             <a href="#"
               style={{
@@ -284,7 +284,7 @@ function WorkHeader() {
           Built under the <span className="gt">GeneUs Labz</span> banner.
         </h1>
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:560,margin:"0 auto"}}>
-          Every project we ship — from interactive worlds to media platforms — is engineered for legacy.
+          Every project we ship, from interactive worlds to media platforms, is engineered for legacy.
         </p>
       </div>
     </section>

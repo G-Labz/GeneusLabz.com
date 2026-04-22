@@ -11,7 +11,7 @@ const CSS = `
     --dna-blue: #5BA8F5; --dna-pink: #E040A0;
     --bg:       #f8f9fd; --bg-deep: #eef0f9; --bg-card: #ffffff; --bg-hi: #f3f5fc;
     --border:   rgba(0,0,0,0.07); --border-hi: rgba(0,0,0,0.11);
-    --t1:#0e1117; --t2:#4f5878; --t3:#8591ab;
+    --t1:#0e1117; --t2:#404f6a; --t3:#5e6b85;
     --ff-d:'Epilogue',sans-serif; --ff-b:'Instrument Sans',sans-serif; --ff-m:'Fira Code',monospace;
     --ease: cubic-bezier(0.16,1,0.3,1);
   }
@@ -24,7 +24,7 @@ const CSS = `
   ::-webkit-scrollbar{width:3px;}
   ::-webkit-scrollbar-track{background:var(--bg-deep);}
   ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
-  .skip{position:absolute;top:-100px;left:16px;z-index:9999;background:var(--gold);color:#000;padding:8px 16px;border-radius:6px;font-family:var(--ff-m);font-size:0.75rem;font-weight:600;transition:top 0.2s;}
+  .skip{position:fixed;top:-100px;left:16px;z-index:9999;background:var(--gold);color:#000;padding:8px 16px;border-radius:6px;font-family:var(--ff-m);font-size:0.75rem;font-weight:600;transition:top 0.2s;}
   .skip:focus{top:16px;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
   @keyframes float{

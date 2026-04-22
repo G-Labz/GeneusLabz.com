@@ -23,7 +23,7 @@ function Manifesto() {
             <span className="gt">We build them.&rdquo;</span>
           </blockquote>
           <p style={{fontSize:"1.25rem",fontWeight:500,color:"var(--t2)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
-            GeneUs Labz exists to build what others hesitate to start — original systems, worlds, and platforms designed to last.
+            GeneUs Labz exists to build what others hesitate to start: original systems, worlds, and platforms designed to last.
           </p>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,rgba(91,168,245,0.3),rgba(224,64,160,0.3))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {pillars.map((p,i)=>(
@@ -52,7 +52,7 @@ function Founders() {
       num:"01",
       name:"Marlon",
       role:"Co-Founder · Creative Director",
-      desc:"Leads product vision, IP development, and creative strategy across all GeneUs Labz build tracks. The reason the studio exists is the work he couldn\u2019t find anywhere else — so he built the place to make it.",
+      desc:"Leads product vision, IP development, and creative strategy across all GeneUs Labz build tracks. The reason the studio exists is the work he couldn\u2019t find anywhere else, so he built the place to make it.",
     },
     {
       num:"02",
