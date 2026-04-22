@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { CSS, Nav, Footer } from "../_shared";
 
-<<<<<<< HEAD
 // ─── Contact ──────────────────────────────────────────────────────────────────
 function ContactSection() {
   return (
@@ -25,8 +24,6 @@ function ContactSection() {
 }
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
-=======
->>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
 export default function ContactPage() {
   useEffect(()=>{
     const els=document.querySelectorAll(".reveal");
@@ -39,21 +36,10 @@ export default function ContactPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
-<<<<<<< HEAD
+      <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
       <main id="main-content" style={{background:"radial-gradient(ellipse 85% 45% at 50% 0%,rgba(255,0,128,0.05) 0%,transparent 55%), radial-gradient(ellipse 55% 40% at 0% 100%,rgba(0,170,255,0.05) 0%,transparent 55%)"}}>
         <ContactSection/>
-=======
-      <a href="#main-content" className="skip">Skip to main content</a>
-      <Nav/>
-      <main id="main-content" style={{paddingTop:66}}>
-        <section style={{padding:"120px 0",minHeight:"60vh"}}>
-          <div className="wrap">
-            <div className="lbl">Contact</div>
-            <h1 className="st">Get in touch.</h1>
-          </div>
-        </section>
->>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
       </main>
       <Footer/>
     </>

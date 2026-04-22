@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { CSS, Nav, Footer } from "../_shared";
 
-<<<<<<< HEAD
 // ─── Blog ─────────────────────────────────────────────────────────────────────
 function BlogIndex() {
   return (
@@ -25,8 +24,6 @@ function BlogIndex() {
 }
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
-=======
->>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
 export default function BlogPage() {
   useEffect(()=>{
     const els=document.querySelectorAll(".reveal");
@@ -39,21 +36,10 @@ export default function BlogPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html:CSS}}/>
-<<<<<<< HEAD
+      <a href="#main-content" className="skip">Skip to main content</a>
       <Nav/>
       <main id="main-content" style={{background:"radial-gradient(ellipse 85% 45% at 50% 0%,rgba(0,170,255,0.05) 0%,transparent 55%), radial-gradient(ellipse 55% 40% at 100% 100%,rgba(255,0,128,0.05) 0%,transparent 55%)"}}>
         <BlogIndex/>
-=======
-      <a href="#main-content" className="skip">Skip to main content</a>
-      <Nav/>
-      <main id="main-content" style={{paddingTop:66}}>
-        <section style={{padding:"120px 0",minHeight:"60vh"}}>
-          <div className="wrap">
-            <div className="lbl">Blog</div>
-            <h1 className="st">Coming soon.</h1>
-          </div>
-        </section>
->>>>>>> a0ce0c6 (Routing separation: multi-page structure implemented)
       </main>
       <Footer/>
     </>
