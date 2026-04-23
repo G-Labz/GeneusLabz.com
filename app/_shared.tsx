@@ -21,6 +21,9 @@ const CSS = `
   a{color:inherit;text-decoration:none;}
   ul{list-style:none;}
   button{font-family:inherit;}
+  img{-webkit-user-drag:none;-webkit-user-select:none;user-select:none;pointer-events:none;}
+  a img,button img{pointer-events:auto;}
+  .bp,.bg,.nav-cta{user-select:none;-webkit-user-select:none;}
   ::-webkit-scrollbar{width:3px;}
   ::-webkit-scrollbar-track{background:var(--bg-deep);}
   ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
@@ -107,7 +110,7 @@ function Nav() {
     }}>
       <div className="nav-inner" style={{maxWidth:1120,margin:"0 auto",padding:"0 40px",height:66,display:"flex",alignItems:"center",gap:36}}>
         <Link href="/" aria-label="GeneUs Labz — Home" style={{display:"flex",alignItems:"center",gap:9,flexShrink:0}}>
-          <img src={LOGO_SRC} alt="" aria-hidden="true" width={34} height={34} style={{objectFit:"contain",display:"block"}}/>
+          <img src={LOGO_SRC} alt="" aria-hidden="true" width={34} height={34} draggable={false} onDragStart={e=>e.preventDefault()} style={{objectFit:"contain",display:"block"}}/>
           <span style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"0.97rem",letterSpacing:"-0.02em",color:"var(--t1)"}}>
             Gene<span style={{color:"var(--gold)"}}>Us</span> Labz
           </span>
@@ -142,7 +145,7 @@ function Footer() {
         <div className="footer-grid" style={{display:"grid",gridTemplateColumns:"1.6fr 1fr 1fr 1fr",gap:44,marginBottom:48}}>
           <div>
             <Link href="/" aria-label="GeneUs Labz home" style={{display:"flex",alignItems:"center",gap:8,marginBottom:16}}>
-              <img src={LOGO_SRC} alt="" aria-hidden="true" width={28} height={28} style={{objectFit:"contain"}}/>
+              <img src={LOGO_SRC} alt="" aria-hidden="true" width={28} height={28} draggable={false} onDragStart={e=>e.preventDefault()} style={{objectFit:"contain"}}/>
               <span style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"0.93rem",letterSpacing:"-0.02em",color:"var(--t1)"}}>
                 Gene<span style={{color:"var(--gold)"}}>Us</span> Labz
               </span>
@@ -153,7 +156,7 @@ function Footer() {
             <div style={{display:"flex",gap:7}}>
               {([["in","LinkedIn","https://www.linkedin.com/company/geneuslabz/"],["◎","Instagram","https://www.instagram.com/geneuslabz/"]] as [string,string,string][]).map(([icon,lbl,href])=>(
                 <a key={lbl} href={href} target="_blank" rel="noopener noreferrer" aria-label={lbl}
-                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s",textDecoration:"none"}}
+                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"background 0.16s,border-color 0.16s,color 0.16s",textDecoration:"none",userSelect:"none",WebkitUserSelect:"none"}}
                   onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
                   onMouseLeave={e=>{e.currentTarget.style.background="rgba(0,0,0,0.04)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
                 >{icon}</a>
