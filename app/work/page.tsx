@@ -57,7 +57,7 @@ function Flagship() {
                 border:"1px solid rgba(245,166,35,0.38)",
                 borderRadius:10, padding:"12px 26px",
                 fontFamily:"var(--ff-m)", fontSize:"0.72rem", letterSpacing:"0.06em",
-                color:"var(--gold)", textDecoration:"none", transition:"background 0.22s, border-color 0.22s",
+                color:"var(--gold)", textDecoration:"none", transition:"background 0.22s, border-color 0.22s", userSelect:"none", WebkitUserSelect:"none",
               }}
               onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.24) 0%, rgba(212,43,43,0.18) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.65)";}}
               onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.38)";}}
@@ -66,7 +66,7 @@ function Flagship() {
             </a>
           </div>
           {/* RIGHT */}
-          <div style={{position:"relative"}}>
+          <div style={{position:"relative",userSelect:"none",WebkitUserSelect:"none"}}>
             {/* Logo */}
             <div style={{display:"flex", justifyContent:"center", marginBottom:30, position:"relative"}}>
               <div aria-hidden="true" style={{
@@ -88,8 +88,9 @@ function Flagship() {
                   borderRadius:11, overflow:"hidden",
                   border:"1px solid rgba(245,166,35,0.13)",
                   boxShadow:"0 2px 16px rgba(0,0,0,0.10)",
+                  userSelect:"none", WebkitUserSelect:"none",
                 }}>
-                  <img src={src} alt={alt} style={{width:"100%", height:164, objectFit:"cover", display:"block"}}/>
+                  <img src={src} alt={alt} draggable={false} onDragStart={e=>e.preventDefault()} style={{width:"100%", height:164, objectFit:"cover", display:"block", userSelect:"none", WebkitUserSelect:"none", pointerEvents:"none"}}/>
                 </div>
               ))}
             </div>
