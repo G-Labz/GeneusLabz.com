@@ -57,7 +57,7 @@ function Flagship() {
                 border:"1px solid rgba(245,166,35,0.38)",
                 borderRadius:10, padding:"12px 26px",
                 fontFamily:"var(--ff-m)", fontSize:"0.72rem", letterSpacing:"0.06em",
-                color:"var(--gold)", textDecoration:"none", transition:"all 0.22s",
+                color:"var(--gold)", textDecoration:"none", transition:"background 0.22s, border-color 0.22s",
               }}
               onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.24) 0%, rgba(212,43,43,0.18) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.65)";}}
               onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.38)";}}
@@ -240,7 +240,7 @@ function Tracks() {
             <h2 className="st" id="tracks-h">Three verticals.<br/>One relentless focus.</h2>
           </div>
           <a href="/work"
-            style={{display:"inline-flex",alignItems:"center",gap:7,fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t2)",border:"1px solid var(--border)",padding:"7px 15px",borderRadius:8,transition:"all 0.18s",flexShrink:0,whiteSpace:"nowrap"}}
+            style={{display:"inline-flex",alignItems:"center",gap:7,fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t2)",border:"1px solid var(--border)",padding:"7px 15px",borderRadius:8,transition:"border-color 0.18s, color 0.18s",flexShrink:0,whiteSpace:"nowrap"}}
             onMouseEnter={e=>{e.currentTarget.style.borderColor="var(--border-hi)";e.currentTarget.style.color="var(--t1)";}}
             onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t2)";}}
           >View Our Work <span aria-hidden="true">→</span></a>
@@ -250,10 +250,10 @@ function Tracks() {
           {tracks.map((t,i)=>(
             <div key={i}
               className="track-row" style={{background:"var(--bg-deep)",padding:"38px 40px",display:"grid",gridTemplateColumns:"220px 1fr 1fr",gap:44,alignItems:"center",transition:"background 0.2s",position:"relative",overflow:"hidden"}}
-              onMouseEnter={e=>{e.currentTarget.style.background="var(--bg-card)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.transform="scaleX(1)";}}
-              onMouseLeave={e=>{e.currentTarget.style.background="var(--bg-deep)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.transform="scaleX(0)";}}
+              onMouseEnter={e=>{e.currentTarget.style.background="var(--bg-card)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.opacity="1";}}
+              onMouseLeave={e=>{e.currentTarget.style.background="var(--bg-deep)";const tb=e.currentTarget.querySelector(".tbar") as HTMLElement|null;if(tb)tb.style.opacity="0";}}
             >
-              <div className="tbar" style={{position:"absolute",left:0,top:0,bottom:0,width:2,background:t.color,transform:"scaleX(0)",transformOrigin:"left",transition:"transform 0.3s var(--ease)"}}/>
+              <div className="tbar" style={{position:"absolute",left:0,top:0,bottom:0,width:2,background:t.color,opacity:0,transition:"opacity 0.3s var(--ease)"}}/>
               <div>
                 <div style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.1em",color:t.color,marginBottom:11}}>{t.num}</div>
                 <div style={{fontFamily:"var(--ff-d)",fontWeight:800,fontSize:"1.15rem",letterSpacing:"-0.025em",color:"var(--t1)",lineHeight:1.22,marginBottom:14}}>{t.area}</div>
