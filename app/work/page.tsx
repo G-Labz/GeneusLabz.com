@@ -34,7 +34,8 @@ function Flagship() {
             <h2 style={{
               fontFamily:"var(--ff-d)", fontWeight:900,
               fontSize:"clamp(3.2rem,7vw,5.8rem)",
-              letterSpacing:"-0.04em", lineHeight:0.92, marginBottom:22,
+              letterSpacing:"-0.04em", lineHeight:1.0, marginBottom:22,
+              paddingBottom:"0.08em",
               background:"linear-gradient(130deg, #f5a623 0%, #e8621a 38%, #d42b2b 72%, #9b1fa8 100%)",
               WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text",
             }}>ShangoMaji</h2>
@@ -49,19 +50,20 @@ function Flagship() {
             }}>
               Proof of what&apos;s possible when culture, craft, and community are built into the foundation, not added later.
             </p>
-            <span
-              aria-label="ShangoMaji — coming soon"
+            <a href="https://shangomaji.com" target="_blank" rel="noopener noreferrer"
               style={{
                 display:"inline-flex", alignItems:"center", gap:8,
                 background:"linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)",
                 border:"1px solid rgba(245,166,35,0.38)",
                 borderRadius:10, padding:"12px 26px",
                 fontFamily:"var(--ff-m)", fontSize:"0.72rem", letterSpacing:"0.06em",
-                color:"var(--gold)", cursor:"default", userSelect:"none",
+                color:"var(--gold)", textDecoration:"none", transition:"all 0.22s",
               }}
+              onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.24) 0%, rgba(212,43,43,0.18) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.65)";}}
+              onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg, rgba(245,166,35,0.13) 0%, rgba(212,43,43,0.10) 100%)"; e.currentTarget.style.borderColor="rgba(245,166,35,0.38)";}}
             >
-              Explore ShangoMaji <span style={{fontSize:14, lineHeight:1, opacity:0.5}}>→</span>
-            </span>
+              Explore ShangoMaji <span style={{fontSize:14, lineHeight:1}}>→</span>
+            </a>
           </div>
           {/* RIGHT */}
           <div style={{position:"relative"}}>

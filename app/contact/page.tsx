@@ -18,9 +18,12 @@ function ContactSection() {
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:28}}>
           GeneUs Labz is open to strategic partnerships, serious collaborators, and aligned creators who are building for the long term. If you understand what we&apos;re doing here and want to be part of it, this is where that conversation starts.
         </p>
-        <p style={{fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.9,maxWidth:480}}>
+        <p style={{fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.9,maxWidth:480,marginBottom:32}}>
           Strategic partnerships &nbsp;·&nbsp; IP co-development &nbsp;·&nbsp; Talent &amp; operator alignment &nbsp;·&nbsp; Media &amp; distribution
         </p>
+        <a href="mailto:GeneUs.Labz@outlook.com" className="bp" style={{display:"inline-flex",alignItems:"center",gap:9}}>
+          <span>Send a Message</span><span className="arr" aria-hidden="true">→</span>
+        </a>
       </div>
     </section>
   );

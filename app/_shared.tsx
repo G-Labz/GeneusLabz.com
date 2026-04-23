@@ -146,11 +146,13 @@ function Footer() {
             <p style={{fontSize:"0.82rem",color:"var(--t3)",lineHeight:1.7,maxWidth:230,marginBottom:20}}>
               GeneUs Labz builds original systems, worlds, and platforms across culture, technology, and media.
             </p>
-            <div aria-hidden="true" style={{display:"flex",gap:7}}>
-              {["𝕏","◎","in","⌘"].map((icon,i)=>(
-                <span key={i}
-                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)"}}
-                >{icon}</span>
+            <div style={{display:"flex",gap:7}}>
+              {([["in","LinkedIn","https://www.linkedin.com/company/geneuslabz/"],["◎","Instagram","https://www.instagram.com/geneuslabz/"]] as [string,string,string][]).map(([icon,lbl,href])=>(
+                <a key={lbl} href={href} target="_blank" rel="noopener noreferrer" aria-label={lbl}
+                  style={{width:30,height:30,borderRadius:7,background:"rgba(0,0,0,0.04)",border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"var(--t3)",transition:"all 0.16s",textDecoration:"none"}}
+                  onMouseEnter={e=>{e.currentTarget.style.background="var(--gold-dim)";e.currentTarget.style.borderColor="rgba(201,139,10,0.25)";e.currentTarget.style.color="var(--gold)";}}
+                  onMouseLeave={e=>{e.currentTarget.style.background="rgba(0,0,0,0.04)";e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--t3)";}}
+                >{icon}</a>
               ))}
             </div>
           </div>
@@ -170,10 +172,15 @@ function Footer() {
         </div>
         <div className="footer-bottom" style={{display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:24,borderTop:"1px solid var(--border)"}}>
           <span style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>© 2024–2026 GeneUs Labz. All rights reserved.</span>
-          <div style={{display:"flex",gap:20}}>
-            {["Privacy","Terms","Accessibility"].map(lbl=>(
-              <span key={lbl} style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)"}}>{lbl}</span>
-            ))}
+          <div style={{display:"flex",gap:16}}>
+            <a href="https://www.linkedin.com/company/geneuslabz/" target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)",transition:"color 0.14s",textDecoration:"none"}}
+              onMouseEnter={e=>e.currentTarget.style.color="var(--t2)"}
+              onMouseLeave={e=>e.currentTarget.style.color="var(--t3)"}
+            >LinkedIn</a>
+            <a href="https://www.instagram.com/geneuslabz/" target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--ff-m)",fontSize:"0.57rem",letterSpacing:"0.06em",color:"var(--t3)",transition:"color 0.14s",textDecoration:"none"}}
+              onMouseEnter={e=>e.currentTarget.style.color="var(--t2)"}
+              onMouseLeave={e=>e.currentTarget.style.color="var(--t3)"}
+            >Instagram</a>
           </div>
         </div>
       </div>
