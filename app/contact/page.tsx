@@ -15,11 +15,14 @@ function ContactSection() {
           Work With <span className="gt">Us</span>
         </h1>
         <div aria-hidden="true" style={{width:72,height:1,background:"linear-gradient(90deg,var(--dna-pink),var(--dna-blue))",marginBottom:24,opacity:0.55}}/>
+        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:20}}>
+          GeneUs Labz is a venture studio. We are not a services provider and we are not looking for general inquiries. If you are a serious operator, strategic partner, or someone building something that genuinely aligns with what we are doing here — this is where that conversation starts.
+        </p>
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:28}}>
-          GeneUs Labz is open to strategic partnerships, serious collaborators, and aligned creators who are building for the long term. If you understand what we&apos;re doing here and want to be part of it, this is where that conversation starts.
+          We move with intention. If your work is built on ownership, long-horizon thinking, and cultural seriousness, we want to hear from you.
         </p>
         <p style={{fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.9,maxWidth:480,marginBottom:32}}>
-          Strategic partnerships &nbsp;·&nbsp; IP co-development &nbsp;·&nbsp; Talent &amp; operator alignment &nbsp;·&nbsp; Media &amp; distribution
+          Strategic partnerships &nbsp;·&nbsp; IP co-development &nbsp;·&nbsp; Builder &amp; operator alignment &nbsp;·&nbsp; Cultural media &amp; distribution
         </p>
         <a href="mailto:GeneUs.Labz@outlook.com" className="bp" style={{display:"inline-flex",alignItems:"center",gap:9}}>
           <span>Send a Message</span><span className="arr" aria-hidden="true">→</span>

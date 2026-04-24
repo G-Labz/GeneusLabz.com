@@ -27,7 +27,7 @@ function Flagship() {
         <div style={{
           fontFamily:"var(--ff-m)", fontSize:"0.57rem", letterSpacing:"0.16em",
           color:"var(--gold)", textTransform:"uppercase", marginBottom:40,
-        }}>Flagship IP</div>
+        }}>Flagship IP · In Development</div>
         {/* Two-column */}
         <div className="flagship-grid" style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:80, alignItems:"center"}}>
           {/* LEFT */}
@@ -43,13 +43,13 @@ function Flagship() {
             <p style={{
               fontFamily:"var(--ff-b)", fontWeight:500, fontSize:"1.12rem",
               color:"var(--t1)", lineHeight:1.55, marginBottom:30, maxWidth:430,
-            }}>A global anime culture network centered on Afro influence, creativity, and storytelling.</p>
+            }}>A culture-first anime network in active development under GeneUs Labz. Built around Afro influence, original storytelling, and long-term IP ownership.</p>
             <p style={{
               fontFamily:"var(--ff-b)", fontWeight:400, fontSize:"0.93rem",
               color:"var(--t2)", lineHeight:1.7, marginBottom:44,
               paddingLeft:14, borderLeft:"2px solid rgba(245,166,35,0.35)",
             }}>
-              Proof of what&apos;s possible when culture, craft, and community are built into the foundation, not added later.
+              The studio’s first major flagship. Being built ground-up by GeneUs Labz — IP, community, and distribution architecture fully owned by the studio.
             </p>
             <div style={{display:"inline-flex", flexDirection:"column", alignItems:"flex-start", gap:12}}>
               <button
@@ -236,13 +236,13 @@ function Tracks() {
 
   const tracks = [
     {num:"01",color:"var(--gold)",    area:"Gaming & Interactive Media",
-     desc:"Culture-first games, interactive IP, and world-building for the long haul.",
+     desc:"Original games and interactive IP built for culture, not just market. We design the worlds and hold the rights.",
      tags:["Game Design","Interactive IP","World-Building"],Viz:GamingViz},
     {num:"02",color:"var(--dna-pink)",area:"Entertainment & Narrative",
-     desc:"Story-first IP and media with cultural weight built in from day one.",
+     desc:"Original narrative IP and media properties. We develop the stories, own the characters, control the distribution path.",
      tags:["Original IP","Content","Media"],Viz:EntertainmentViz},
     {num:"03",color:"var(--dna-blue)",area:"Software & Technology",
-     desc:"Platforms and tools built by people inside these industries. No guesswork.",
+     desc:"Software and platforms built to support the studio’s IP and operations. Built internally, owned entirely.",
      tags:["Platforms","Dev Tools","Infrastructure"],Viz:TechViz},
   ];
 
@@ -251,8 +251,8 @@ function Tracks() {
       <div className="wrap">
         <div className="reveal tracks-header" style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:52,gap:32}}>
           <div>
-            <div className="lbl">Innovation Tracks</div>
-            <h2 className="st" id="tracks-h">Three verticals.<br/>One relentless focus.</h2>
+            <div className="lbl">Build Tracks</div>
+            <h2 className="st" id="tracks-h">Three verticals.<br/>Full ownership in each.</h2>
           </div>
           <a href="/work"
             style={{display:"inline-flex",alignItems:"center",gap:7,fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t2)",border:"1px solid var(--border)",padding:"7px 15px",borderRadius:8,transition:"border-color 0.18s, color 0.18s",flexShrink:0,whiteSpace:"nowrap"}}
@@ -297,10 +297,10 @@ function WorkHeader() {
       <div className="wrap reveal" style={{position:"relative",zIndex:1,textAlign:"center"}}>
         <div className="lbl"><span className="gt">Our Work</span></div>
         <h1 className="st" style={{marginBottom:16}}>
-          Built under the <span className="gt">GeneUs Labz</span> banner.
+          Everything built here is <span className="gt">owned here.</span>
         </h1>
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:560,margin:"0 auto"}}>
-          Every project we ship, from interactive worlds to media platforms, is engineered for legacy.
+          GeneUs Labz is a venture studio with active build tracks across gaming, entertainment, and technology. We do not take client work. We build our own products, IP, and systems — structured for ownership from day one.
         </p>
       </div>
     </section>

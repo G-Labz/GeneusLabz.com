@@ -23,7 +23,7 @@ function Manifesto() {
             <span className="gt">We build them.&rdquo;</span>
           </blockquote>
           <p style={{fontSize:"1.25rem",fontWeight:500,color:"var(--t2)",maxWidth:500,margin:"0 auto",lineHeight:1.78}}>
-            GeneUs Labz exists to build what others hesitate to start: original systems, worlds, and platforms designed to last.
+            GeneUs Labz is a founder-led venture studio. We exist to build what others hesitate to start: original systems, worlds, and platforms engineered for long-term ownership — not acquired, not outsourced, not borrowed.
           </p>
           <div className="pillars-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,marginTop:60,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",textAlign:"left",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(90deg,rgba(91,168,245,0.3),rgba(224,64,160,0.3))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {pillars.map((p,i)=>(
@@ -68,7 +68,7 @@ function Founders() {
           <div className="lbl">The Operators</div>
           <h2 className="st" style={{marginBottom:20}}>Real people.<br/>Real stakes.</h2>
           <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.74,maxWidth:540,marginBottom:44}}>
-            GeneUs Labz was founded by two operators who couldn&apos;t find a studio building the kind of cultural IP they believed in. So they built the studio instead. This is not a concept. It is an operating company.
+            Marlon and Kisha founded GeneUs Labz because the studio they wanted to build from did not exist. So they built it. This is not a concept vehicle or a holding structure with nothing behind it. It is an operating company run by its founders, building toward a long horizon with no outside agenda and no external pressure to rush.
           </p>
           <div className="founders-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:2,background:"var(--border)",border:"1px solid transparent",borderRadius:12,overflow:"hidden",backgroundImage:"linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,rgba(201,139,10,0.25),rgba(91,168,245,0.2))",backgroundOrigin:"border-box",backgroundClip:"padding-box,border-box"}}>
             {team.map((f,i)=>(
@@ -84,7 +84,7 @@ function Founders() {
             ))}
           </div>
           <p style={{fontFamily:"var(--ff-m)",fontSize:"0.6rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.7,marginTop:28}}>
-            Independent. Founder-operated. No outside agenda. No borrowed vision.
+            Independent. Founder-operated. Long-horizon. Asset-focused. No outside agenda. No borrowed vision.
           </p>
         </div>
       </div>
