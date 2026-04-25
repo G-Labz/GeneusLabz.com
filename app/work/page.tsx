@@ -122,9 +122,9 @@ function Metrics() {
   const [counted,setCounted] = useState(false);
   const [vals,setVals] = useState([0,0,0,0]);
   const data = [
-    {target:12,suffix:"+",label:"Ideas in Development",sub:"Across gaming, entertainment & tech"},
-    {target:3, suffix:"", label:"Active Build Tracks",  sub:"Gaming · Entertainment · Technology"},
-    {target:8, suffix:"+",label:"Team Members",         sub:"Builders, designers, operators"},
+    {target:3, suffix:"+",label:"Ideas in Development", sub:"Across gaming, entertainment & tech"},
+    {target:1, suffix:"", label:"Active Build Track",   sub:"ShangoMaji · Flagship IP"},
+    {target:2, suffix:"", label:"Team Members",         sub:"Founder-operated. No filler."},
     {target:2, suffix:"", label:"Years in the Lab",     sub:"And we're just getting started"},
   ];
   useEffect(()=>{

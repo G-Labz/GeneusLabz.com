@@ -16,16 +16,19 @@ function ContactSection() {
         </h1>
         <div aria-hidden="true" style={{width:72,height:1,background:"linear-gradient(90deg,var(--dna-pink),var(--dna-blue))",marginBottom:24,opacity:0.55}}/>
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:20}}>
-          GeneUs Labz is a venture studio. We are not a services provider and we are not looking for general inquiries. If you are a serious operator, strategic partner, or someone building something that genuinely aligns with what we are doing here — this is where that conversation starts.
+          GeneUs Labz is not open to general inquiries.
+        </p>
+        <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:20}}>
+          We are building a long-horizon studio and are only interested in conversations with people serious about ownership, systems, and building real things over time.
         </p>
         <p style={{fontSize:"1rem",color:"var(--t2)",lineHeight:1.7,maxWidth:580,marginBottom:28}}>
-          We move with intention. If your work is built on ownership, long-horizon thinking, and cultural seriousness, we want to hear from you.
+          If you are a builder, operator, or creator aligned with that direction, this is where the conversation starts.
         </p>
         <p style={{fontFamily:"var(--ff-m)",fontSize:"0.62rem",letterSpacing:"0.07em",color:"var(--t3)",lineHeight:1.9,maxWidth:480,marginBottom:32}}>
-          Strategic partnerships &nbsp;·&nbsp; IP co-development &nbsp;·&nbsp; Builder &amp; operator alignment &nbsp;·&nbsp; Cultural media &amp; distribution
+          Builder alignment &nbsp;·&nbsp; Operator conversations &nbsp;·&nbsp; Talent candidates &nbsp;·&nbsp; Cultural IP development &nbsp;·&nbsp; Long-horizon systems
         </p>
-        <a href="mailto:GeneUs.Labz@outlook.com" className="bp" style={{display:"inline-flex",alignItems:"center",gap:9}}>
-          <span>Send a Message</span><span className="arr" aria-hidden="true">→</span>
+        <a href="mailto:MarlonMerritt@geneuslabz.com,GeneUsLabz@outlook.com" className="bp" style={{display:"inline-flex",alignItems:"center",gap:9}}>
+          <span>Start a Conversation</span><span className="arr" aria-hidden="true">→</span>
         </a>
       </div>
     </section>
